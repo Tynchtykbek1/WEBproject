@@ -4,6 +4,11 @@ import json
 import datetime
 from .models import * 
 from .utils import cookieCart, cartData, guestOrder
+from django.shortcuts import render, get_object_or_404
+from .models import Product
+
+def about(request):
+    return render(request, 'store/about.html')
 
 def store(request):
 	data = cartData(request)
@@ -91,3 +96,8 @@ def processOrder(request):
 		)
 
 	return JsonResponse('Payment submitted..', safe=False)
+
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, id=pk)
+    return render(request, 'store/product_detail.html', {'product': product})

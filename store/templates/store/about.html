@@ -1,0 +1,20 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="box-element">
+    <div class="row" style="align-items: center;">
+        <!-- Logo on the left -->
+        <div class="col-md-4 text-center">
+            <img src="{% static 'images/armor_logo.png' %}" alt="Armor&Warrior Logo" style="width: 100%; max-width: 300px;">
+        </div>
+
+        <!-- Text on the right -->
+        <div class="col-md-8">
+            <h2>About Us</h2>
+            <p><strong>Armor&Warrior</strong> is a webstore created to supply high-quality gear for all martial arts disciplines — from judo and wrestling to boxing and taekwondo.</p>
+            <p>The name <strong>Armor&Warrior</strong> symbolizes the mindset of every fighter: disciplined, focused, and armored with purpose. Our goal is to provide reliable equipment to every warrior of the mat, ring, or dojo.</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
